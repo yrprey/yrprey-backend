@@ -38,16 +38,16 @@ Complete table with endpoint routes, vulnerability details and a comparison betw
 |   10    |  GET       |   /phpinfo    |    PHP Settings              | API-7 Misconfiguration        | Change to API-8 Misconfiguration       |                               |
 |   11    |  GET       |   /           | Connection without HTTPS and Certificate| API-7 Misconfiguration        | Change to API-8 Misconfiguration       |                               |
 |   12    |  GET       |   /login      | Authentication without captcha       | API-7 Misconfiguration        | Change to API-8 Misconfiguration       |                               |
-|   13    |     GET    |   /           | Checks if back-end is Active| No exist no OWASP 2019        | API-7 Server Side Request Forgery (SSRF)                             |
-|   14    |  POST      |   /login      |    User authentication     | API-8 Injection (MySQLi)      |   No exist no OWASP 2023                        |
-|   15    |  POST      |   /register   |    Register user           | API-8 Injection (RCE Command) |   No exist no OWASP 2023                        |
-|   16    |  GET       |   /vendor/jquery.js            |    Library exploration    | API-8 Injection (XSS e Prototype Pollution ) |   No exist no OWASP 2023                        |
-|   17    |  GET       |   /vendor/bootstrap.js            |    Library exploration    | API-8 Injection (XSS) |   No exist no OWASP 2023                        |
-|   18    |  GET       |   /vendor/lodash.js            |    Library exploration    | API-8 Injection (RCE,ReDos e PrototypePollution ) |   No exist no OWASP 2023                        |
-|   19    |  POST      |   /logout     | Logout and direct to home   | API-8 Injection (Open Redirect) |   No exist no OWASP 2023                        |
-|   20    |  POST      |   /profile    |    Redefine password             | API-8 Injection (CSRF)          |   No exist no OWASP 2023                        | 
+|   13    |     GET    |   /           | Checks if back-end is Active| Does not exist in OWASP 2019        | API-7 Server Side Request Forgery (SSRF)                             |
+|   14    |  POST      |   /login      |    User authentication     | API-8 Injection (MySQLi)      |   Does not exist in OWASP 2023                        |
+|   15    |  POST      |   /register   |    Register user           | API-8 Injection (RCE Command) |   Does not exist in OWASP 2023                        |
+|   16    |  GET       |   /vendor/jquery.js            |    Library exploration    | API-8 Injection (XSS e Prototype Pollution ) |   Does not exist in OWASP 2023                        |
+|   17    |  GET       |   /vendor/bootstrap.js            |    Library exploration    | API-8 Injection (XSS) |   Does not exist in OWASP 2023                        |
+|   18    |  GET       |   /vendor/lodash.js            |    Library exploration    | API-8 Injection (RCE,ReDos e PrototypePollution ) |   Does not exist in OWASP 2023                        |
+|   19    |  POST      |   /logout     | Logout and direct to home   | API-8 Injection (Open Redirect) |   Does not exist in OWASP 2023                        |
+|   20    |  POST      |   /profile    |    Redefine password             | API-8 Injection (CSRF)          |   Does not exist in OWASP 2023                        | 
 |   21    |  GET       |   /shop       |    View my purchases   | API9:2019 Improper Assets Management (Scene 01) | Change to API3:2023 Broken Object Property Level Authorization |
-|   22    |  GET       |   /about?id={injection} |    View content About    | API10:2019 Insufficient Logging & Monitoring | No exist no OWASP 2023      |
+|   22    |  GET       |   /about?id={injection} |    View content About    | API10:2019 Insufficient Logging & Monitoring | Does not exist in OWASP 2023      |
 
 For more details you can use a service like the [swagger editor](https://editor.swagger.io).
 
@@ -56,12 +56,12 @@ For more details you can use a service like the [swagger editor](https://editor.
 You can created one local servers:
 
 Backend
-- Windows 10.0
 - Linux Ubuntu with PHP and MySQL
 - Give chmod 777 /var/www/html/
 - Give chmod 777 /var/www/html/log/log.php
 - Create database with name yrprey
 - Download the yrprey database file (yrprey.sql) and run it in the MySQL database
+- In the database yrprey, dive: "SET GLOBAL sql_mode = ''"
 
 ## Reporting Vulnerabilities
 
