@@ -1,5 +1,7 @@
 # Yprey
 
+![yprey](https://yrprey2.websiteseguro.com/assets/img/logo-letter.png)
+
 **Backend created by [Fernando Mengali](https://www.linkedin.com/in/fernando-mengali-273504142/)**
 
 **Frontend created by [Vagner Mengali](https://www.linkedin.com/in/vagnermengali/)**
